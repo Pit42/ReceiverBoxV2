@@ -1,0 +1,719 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"12 ./TelegramInterpreter.h
+[; ;./TelegramInterpreter.h: 12: {
+[s S91 `uc 1 `uc 1 `uc 1 `uc -> 16 `i `uc -> 2 `i ]
+[n S91 . Start Address Commandlength Command End ]
+"1065 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1065:     struct {
+[s S50 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S50 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 ]
+"1064
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1064: typedef union {
+[u S49 `S50 1 ]
+[n S49 . . ]
+"1074
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1074: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x085)));
+[v _TRISAbits `VS49 ~T0 @X0 0 e@133 ]
+"172
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 172:     struct {
+[s S11 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S11 . RA0 RA1 RA2 RA3 RA4 RA5 ]
+"171
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 171: typedef union {
+[u S10 `S11 1 ]
+[n S10 . . ]
+"181
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 181: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
+[v _PORTAbits `VS10 ~T0 @X0 0 e@5 ]
+"1115
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1115:     struct {
+[s S52 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S52 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 ]
+"1114
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1114: typedef union {
+[u S51 `S52 1 ]
+[n S51 . . ]
+"1124
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1124: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS51 ~T0 @X0 0 e@135 ]
+"222
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 222:     struct {
+[s S13 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S13 . RC0 RC1 RC2 RC3 RC4 RC5 ]
+"221
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 221: typedef union {
+[u S12 `S13 1 ]
+[n S12 . . ]
+"231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 231: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+[v _PORTCbits `VS12 ~T0 @X0 0 e@7 ]
+"69 RelayControl.c
+[; ;RelayControl.c: 69:         if (State == On)
+[c E943 0 1 .. ]
+[n E943 States Off On  ]
+"157
+[; ;RelayControl.c: 157:     }
+[c E936 0 1 2 3 4 5 .. ]
+[n E936 Relays Relay1 Relay2 Relay3 Relay4 Relay5 Relay6  ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 218: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"268
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 268: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"288
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 288: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"366
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 366: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 436: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"443
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 443: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"450
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 450: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"457
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 457: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"528
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 528: __asm("BAUDCTL equ 011h");
+[; <" BAUDCTL equ 011h ;# ">
+"580
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 580: __asm("SPBRGH equ 012h");
+[; <" SPBRGH equ 012h ;# ">
+"600
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 600: __asm("SPBRG equ 013h");
+[; <" SPBRG equ 013h ;# ">
+"607
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 607: __asm("RCREG equ 014h");
+[; <" RCREG equ 014h ;# ">
+"614
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 614: __asm("TXREG equ 015h");
+[; <" TXREG equ 015h ;# ">
+"621
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 621: __asm("TXSTA equ 016h");
+[; <" TXSTA equ 016h ;# ">
+"683
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 683: __asm("RCSTA equ 017h");
+[; <" RCSTA equ 017h ;# ">
+"745
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 745: __asm("WDTCON equ 018h");
+[; <" WDTCON equ 018h ;# ">
+"798
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 798: __asm("CMCON0 equ 019h");
+[; <" CMCON0 equ 019h ;# ">
+"868
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 868: __asm("CMCON1 equ 01Ah");
+[; <" CMCON1 equ 01Ah ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 894: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 901: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"991
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 991: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1061: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1111
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1111: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1161: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1231: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1278
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1278: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1343
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1343: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1395
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1395: __asm("ANSEL equ 091h");
+[; <" ANSEL equ 091h ;# ">
+"1457
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1457: __asm("WPUA equ 095h");
+[; <" WPUA equ 095h ;# ">
+"1462
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1462: __asm("WPU equ 095h");
+[; <" WPU equ 095h ;# ">
+"1611
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1611: __asm("IOCA equ 096h");
+[; <" IOCA equ 096h ;# ">
+"1616
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1616: __asm("IOC equ 096h");
+[; <" IOC equ 096h ;# ">
+"1785
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1785: __asm("EEDATH equ 097h");
+[; <" EEDATH equ 097h ;# ">
+"1792
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1792: __asm("EEADRH equ 098h");
+[; <" EEADRH equ 098h ;# ">
+"1799
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1799: __asm("VRCON equ 099h");
+[; <" VRCON equ 099h ;# ">
+"1859
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1859: __asm("EEDAT equ 09Ah");
+[; <" EEDAT equ 09Ah ;# ">
+"1864
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1864: __asm("EEDATA equ 09Ah");
+[; <" EEDATA equ 09Ah ;# ">
+"1897
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1897: __asm("EEADR equ 09Bh");
+[; <" EEADR equ 09Bh ;# ">
+"1904
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1904: __asm("EECON1 equ 09Ch");
+[; <" EECON1 equ 09Ch ;# ">
+"1949
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1949: __asm("EECON2 equ 09Dh");
+[; <" EECON2 equ 09Dh ;# ">
+"1956
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1956: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"1963
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h: 1963: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"9 ./TelegramInterpreter.h
+[; ;./TelegramInterpreter.h: 9: unsigned TelegramReadyFlag = 0;
+[v _TelegramReadyFlag `ui ~T0 @X0 1 e ]
+[i _TelegramReadyFlag
+-> -> 0 `i `ui
+]
+"20
+[; ;./TelegramInterpreter.h: 20: TelegramType Telegram;
+[v _Telegram `S91 ~T0 @X0 1 e ]
+"27 ./Timer.h
+[; ;./Timer.h: 27: unsigned int Counter_100ms = 0;
+[v _Counter_100ms `ui ~T0 @X0 1 e ]
+[i _Counter_100ms
+-> -> 0 `i `ui
+]
+"28
+[; ;./Timer.h: 28: unsigned int Counter_1sec = 0;
+[v _Counter_1sec `ui ~T0 @X0 1 e ]
+[i _Counter_1sec
+-> -> 0 `i `ui
+]
+"29
+[; ;./Timer.h: 29: unsigned int Counter_10sec = 0;
+[v _Counter_10sec `ui ~T0 @X0 1 e ]
+[i _Counter_10sec
+-> -> 0 `i `ui
+]
+"31
+[; ;./Timer.h: 31: unsigned Stop_Ignition_Flag = 0;
+[v _Stop_Ignition_Flag `ui ~T0 @X0 1 e ]
+[i _Stop_Ignition_Flag
+-> -> 0 `i `ui
+]
+"33
+[; ;./Timer.h: 33: unsigned char StopRelay1OnTime = 0;
+[v _StopRelay1OnTime `uc ~T0 @X0 1 e ]
+[i _StopRelay1OnTime
+-> -> 0 `i `uc
+]
+"34
+[; ;./Timer.h: 34: unsigned char Relay1StopTime[3];
+[v _Relay1StopTime `uc ~T0 @X0 -> 3 `i e ]
+"36
+[; ;./Timer.h: 36: unsigned char StopRelay2OnTime = 0;
+[v _StopRelay2OnTime `uc ~T0 @X0 1 e ]
+[i _StopRelay2OnTime
+-> -> 0 `i `uc
+]
+"37
+[; ;./Timer.h: 37: unsigned char Relay2StopTime[3];
+[v _Relay2StopTime `uc ~T0 @X0 -> 3 `i e ]
+"39
+[; ;./Timer.h: 39: unsigned char StopRelay3OnTime = 0;
+[v _StopRelay3OnTime `uc ~T0 @X0 1 e ]
+[i _StopRelay3OnTime
+-> -> 0 `i `uc
+]
+"40
+[; ;./Timer.h: 40: unsigned char Relay3StopTime[3];
+[v _Relay3StopTime `uc ~T0 @X0 -> 3 `i e ]
+"42
+[; ;./Timer.h: 42: unsigned char StopRelay4OnTime = 0;
+[v _StopRelay4OnTime `uc ~T0 @X0 1 e ]
+[i _StopRelay4OnTime
+-> -> 0 `i `uc
+]
+"43
+[; ;./Timer.h: 43: unsigned char Relay4StopTime[3];
+[v _Relay4StopTime `uc ~T0 @X0 -> 3 `i e ]
+"45
+[; ;./Timer.h: 45: unsigned char StopRelay5OnTime = 0;
+[v _StopRelay5OnTime `uc ~T0 @X0 1 e ]
+[i _StopRelay5OnTime
+-> -> 0 `i `uc
+]
+"46
+[; ;./Timer.h: 46: unsigned char Relay5StopTime[3];
+[v _Relay5StopTime `uc ~T0 @X0 -> 3 `i e ]
+"48
+[; ;./Timer.h: 48: unsigned char StopRelay6OnTime = 0;
+[v _StopRelay6OnTime `uc ~T0 @X0 1 e ]
+[i _StopRelay6OnTime
+-> -> 0 `i `uc
+]
+"49
+[; ;./Timer.h: 49: unsigned char Relay6StopTime[3];
+[v _Relay6StopTime `uc ~T0 @X0 -> 3 `i e ]
+"47 RelayControl.c
+[; ;RelayControl.c: 47: void Init_Relays (void)
+[v _Init_Relays `(v ~T0 @X0 1 ef ]
+"48
+[; ;RelayControl.c: 48: {
+{
+[e :U _Init_Relays ]
+[f ]
+"49
+[; ;RelayControl.c: 49:     TRISAbits.TRISA0 = 0;
+[e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
+"50
+[; ;RelayControl.c: 50:     PORTAbits.RA0 = 0;
+[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
+"51
+[; ;RelayControl.c: 51:     TRISAbits.TRISA1 = 0;
+[e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
+"52
+[; ;RelayControl.c: 52:     PORTAbits.RA1 = 0;
+[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
+"53
+[; ;RelayControl.c: 53:     TRISAbits.TRISA2 = 0;
+[e = . . _TRISAbits 0 2 -> -> 0 `i `uc ]
+"54
+[; ;RelayControl.c: 54:     PORTAbits.RA2 = 0;
+[e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
+"55
+[; ;RelayControl.c: 55:     TRISCbits.TRISC0 = 0;
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
+"56
+[; ;RelayControl.c: 56:     PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"57
+[; ;RelayControl.c: 57:     TRISCbits.TRISC1 = 0;
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
+"58
+[; ;RelayControl.c: 58:     PORTCbits.RC1 = 0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"59
+[; ;RelayControl.c: 59:     TRISCbits.TRISC2 = 0;
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+"60
+[; ;RelayControl.c: 60:     PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"62
+[; ;RelayControl.c: 62: }
+[e :UE 92 ]
+}
+"64
+[; ;RelayControl.c: 64: void Set_Relay (unsigned char Relay, unsigned char State)
+[v _Set_Relay `(v ~T0 @X0 1 ef2`uc`uc ]
+"65
+[; ;RelayControl.c: 65: {
+{
+[e :U _Set_Relay ]
+"64
+[; ;RelayControl.c: 64: void Set_Relay (unsigned char Relay, unsigned char State)
+[v _Relay `uc ~T0 @X0 1 r1 ]
+[v _State `uc ~T0 @X0 1 r2 ]
+"65
+[; ;RelayControl.c: 65: {
+[f ]
+"66
+[; ;RelayControl.c: 66:     switch (Relay)
+[e $U 95  ]
+"67
+[; ;RelayControl.c: 67:     {
+{
+"68
+[; ;RelayControl.c: 68:         case Relay1:
+[e :U 96 ]
+"69
+[; ;RelayControl.c: 69:         if (State == On)
+[e $ ! == -> _State `i -> . `E943 1 `i 97  ]
+"70
+[; ;RelayControl.c: 70:         {
+{
+"71
+[; ;RelayControl.c: 71:             PORTAbits.RA0 = 1;
+[e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
+"72
+[; ;RelayControl.c: 72:         }
+}
+[e $U 98  ]
+"73
+[; ;RelayControl.c: 73:         else if (State == Off)
+[e :U 97 ]
+[e $ ! == -> _State `i -> . `E943 0 `i 99  ]
+"74
+[; ;RelayControl.c: 74:         {
+{
+"75
+[; ;RelayControl.c: 75:             PORTAbits.RA0 = 0;
+[e = . . _PORTAbits 0 0 -> -> 0 `i `uc ]
+"76
+[; ;RelayControl.c: 76:         }
+}
+[e $U 100  ]
+"77
+[; ;RelayControl.c: 77:         else
+[e :U 99 ]
+"78
+[; ;RelayControl.c: 78:         {
+{
+"80
+[; ;RelayControl.c: 80:         }
+}
+[e :U 100 ]
+[e :U 98 ]
+"81
+[; ;RelayControl.c: 81:         break;
+[e $U 94  ]
+"83
+[; ;RelayControl.c: 83:         case Relay2:
+[e :U 101 ]
+"84
+[; ;RelayControl.c: 84:         if (State == On)
+[e $ ! == -> _State `i -> . `E943 1 `i 102  ]
+"85
+[; ;RelayControl.c: 85:         {
+{
+"86
+[; ;RelayControl.c: 86:             PORTAbits.RA1 = 1;
+[e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
+"87
+[; ;RelayControl.c: 87:         }
+}
+[e $U 103  ]
+"88
+[; ;RelayControl.c: 88:         else if (State == Off)
+[e :U 102 ]
+[e $ ! == -> _State `i -> . `E943 0 `i 104  ]
+"89
+[; ;RelayControl.c: 89:         {
+{
+"90
+[; ;RelayControl.c: 90:             PORTAbits.RA1 = 0;
+[e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]
+"91
+[; ;RelayControl.c: 91:         }
+}
+[e $U 105  ]
+"92
+[; ;RelayControl.c: 92:         else
+[e :U 104 ]
+"93
+[; ;RelayControl.c: 93:         {
+{
+"95
+[; ;RelayControl.c: 95:         }
+}
+[e :U 105 ]
+[e :U 103 ]
+"96
+[; ;RelayControl.c: 96:         break;
+[e $U 94  ]
+"98
+[; ;RelayControl.c: 98:         case Relay3:
+[e :U 106 ]
+"99
+[; ;RelayControl.c: 99:         if (State == On)
+[e $ ! == -> _State `i -> . `E943 1 `i 107  ]
+"100
+[; ;RelayControl.c: 100:         {
+{
+"101
+[; ;RelayControl.c: 101:             PORTAbits.RA2 = 1;
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
+"102
+[; ;RelayControl.c: 102:         }
+}
+[e $U 108  ]
+"103
+[; ;RelayControl.c: 103:         else if (State == Off)
+[e :U 107 ]
+[e $ ! == -> _State `i -> . `E943 0 `i 109  ]
+"104
+[; ;RelayControl.c: 104:         {
+{
+"105
+[; ;RelayControl.c: 105:             PORTAbits.RA2 = 0;
+[e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
+"106
+[; ;RelayControl.c: 106:         }
+}
+[e $U 110  ]
+"107
+[; ;RelayControl.c: 107:         else
+[e :U 109 ]
+"108
+[; ;RelayControl.c: 108:         {
+{
+"110
+[; ;RelayControl.c: 110:         }
+}
+[e :U 110 ]
+[e :U 108 ]
+"111
+[; ;RelayControl.c: 111:         break;
+[e $U 94  ]
+"113
+[; ;RelayControl.c: 113:         case Relay4:
+[e :U 111 ]
+"114
+[; ;RelayControl.c: 114:         if (State == On)
+[e $ ! == -> _State `i -> . `E943 1 `i 112  ]
+"115
+[; ;RelayControl.c: 115:         {
+{
+"116
+[; ;RelayControl.c: 116:             PORTCbits.RC0 = 1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+"117
+[; ;RelayControl.c: 117:         }
+}
+[e $U 113  ]
+"118
+[; ;RelayControl.c: 118:         else if (State == Off)
+[e :U 112 ]
+[e $ ! == -> _State `i -> . `E943 0 `i 114  ]
+"119
+[; ;RelayControl.c: 119:         {
+{
+"120
+[; ;RelayControl.c: 120:             PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"121
+[; ;RelayControl.c: 121:         }
+}
+[e $U 115  ]
+"122
+[; ;RelayControl.c: 122:         else
+[e :U 114 ]
+"123
+[; ;RelayControl.c: 123:         {
+{
+"125
+[; ;RelayControl.c: 125:         }
+}
+[e :U 115 ]
+[e :U 113 ]
+"126
+[; ;RelayControl.c: 126:         break;
+[e $U 94  ]
+"128
+[; ;RelayControl.c: 128:         case Relay5:
+[e :U 116 ]
+"129
+[; ;RelayControl.c: 129:         if (State == On)
+[e $ ! == -> _State `i -> . `E943 1 `i 117  ]
+"130
+[; ;RelayControl.c: 130:         {
+{
+"131
+[; ;RelayControl.c: 131:             PORTCbits.RC1 = 1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"132
+[; ;RelayControl.c: 132:         }
+}
+[e $U 118  ]
+"133
+[; ;RelayControl.c: 133:         else if (State == Off)
+[e :U 117 ]
+[e $ ! == -> _State `i -> . `E943 0 `i 119  ]
+"134
+[; ;RelayControl.c: 134:         {
+{
+"135
+[; ;RelayControl.c: 135:             PORTCbits.RC1 = 0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"136
+[; ;RelayControl.c: 136:         }
+}
+[e $U 120  ]
+"137
+[; ;RelayControl.c: 137:         else
+[e :U 119 ]
+"138
+[; ;RelayControl.c: 138:         {
+{
+"140
+[; ;RelayControl.c: 140:         }
+}
+[e :U 120 ]
+[e :U 118 ]
+"141
+[; ;RelayControl.c: 141:         break;
+[e $U 94  ]
+"143
+[; ;RelayControl.c: 143:         case Relay6:
+[e :U 121 ]
+"144
+[; ;RelayControl.c: 144:         if (State == On)
+[e $ ! == -> _State `i -> . `E943 1 `i 122  ]
+"145
+[; ;RelayControl.c: 145:         {
+{
+"146
+[; ;RelayControl.c: 146:             PORTCbits.RC2 = 1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+"147
+[; ;RelayControl.c: 147:         }
+}
+[e $U 123  ]
+"148
+[; ;RelayControl.c: 148:         else if (State == Off)
+[e :U 122 ]
+[e $ ! == -> _State `i -> . `E943 0 `i 124  ]
+"149
+[; ;RelayControl.c: 149:         {
+{
+"150
+[; ;RelayControl.c: 150:             PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"151
+[; ;RelayControl.c: 151:         }
+}
+[e $U 125  ]
+"152
+[; ;RelayControl.c: 152:         else
+[e :U 124 ]
+"153
+[; ;RelayControl.c: 153:         {
+{
+"155
+[; ;RelayControl.c: 155:         }
+}
+[e :U 125 ]
+[e :U 123 ]
+"156
+[; ;RelayControl.c: 156:         break;
+[e $U 94  ]
+"157
+[; ;RelayControl.c: 157:     }
+}
+[e $U 94  ]
+[e :U 95 ]
+[e [\ -> _Relay `i , $ . `E936 0 96
+ , $ . `E936 1 101
+ , $ . `E936 2 106
+ , $ . `E936 3 111
+ , $ . `E936 4 116
+ , $ . `E936 5 121
+ 94 ]
+[e :U 94 ]
+"159
+[; ;RelayControl.c: 159: }
+[e :UE 93 ]
+}
+"161
+[; ;RelayControl.c: 161: unsigned char Read_Relay (unsigned char Relay)
+[v _Read_Relay `(uc ~T0 @X0 1 ef1`uc ]
+"162
+[; ;RelayControl.c: 162:     {
+{
+[e :U _Read_Relay ]
+"161
+[; ;RelayControl.c: 161: unsigned char Read_Relay (unsigned char Relay)
+[v _Relay `uc ~T0 @X0 1 r1 ]
+"162
+[; ;RelayControl.c: 162:     {
+[f ]
+"163
+[; ;RelayControl.c: 163:         switch (Relay)
+[e $U 128  ]
+"164
+[; ;RelayControl.c: 164:         {
+{
+"165
+[; ;RelayControl.c: 165:             case Relay1:
+[e :U 129 ]
+"166
+[; ;RelayControl.c: 166:                 return PORTAbits.RA0;
+[e ) . . _PORTAbits 0 0 ]
+[e $UE 126  ]
+"168
+[; ;RelayControl.c: 168:             case Relay2:
+[e :U 130 ]
+"169
+[; ;RelayControl.c: 169:                 return PORTAbits.RA1;
+[e ) . . _PORTAbits 0 1 ]
+[e $UE 126  ]
+"171
+[; ;RelayControl.c: 171:             case Relay3:
+[e :U 131 ]
+"172
+[; ;RelayControl.c: 172:                 return PORTAbits.RA2;
+[e ) . . _PORTAbits 0 2 ]
+[e $UE 126  ]
+"174
+[; ;RelayControl.c: 174:             case Relay4:
+[e :U 132 ]
+"175
+[; ;RelayControl.c: 175:                 return PORTCbits.RC0;
+[e ) . . _PORTCbits 0 0 ]
+[e $UE 126  ]
+"177
+[; ;RelayControl.c: 177:             case Relay5:
+[e :U 133 ]
+"178
+[; ;RelayControl.c: 178:                 return PORTCbits.RC1;
+[e ) . . _PORTCbits 0 1 ]
+[e $UE 126  ]
+"180
+[; ;RelayControl.c: 180:             case Relay6:
+[e :U 134 ]
+"181
+[; ;RelayControl.c: 181:                 return PORTCbits.RC2;
+[e ) . . _PORTCbits 0 2 ]
+[e $UE 126  ]
+"182
+[; ;RelayControl.c: 182:         }
+}
+[e $U 127  ]
+[e :U 128 ]
+[e [\ -> _Relay `i , $ . `E936 0 129
+ , $ . `E936 1 130
+ , $ . `E936 2 131
+ , $ . `E936 3 132
+ , $ . `E936 4 133
+ , $ . `E936 5 134
+ 127 ]
+[e :U 127 ]
+"183
+[; ;RelayControl.c: 183:         return(255);
+[e ) -> -> 255 `i `uc ]
+[e $UE 126  ]
+"184
+[; ;RelayControl.c: 184:     }
+[e :UE 126 ]
+}

@@ -1,0 +1,16 @@
+_Read_Byte: CODE, 746 0 8
+_Init_Timer: CODE, 702 0 12
+_main: CODE, 477 0 44
+_Stop_Timer: CODE, 761 0 4
+_Handle_Interrupts: CODE, 597 0 27
+_Set_Relay: CODE, 394 0 83
+__initialization: CODE, 19 0 11
+_Handle_Telegram: CODE, 33 0 211
+_Timer_Interrupt: CODE, 648 0 20
+_Init_Relays: CODE, 560 0 37
+_Start_Timer: CODE, 754 0 7
+_Init_Receiver: CODE, 624 0 24
+_Read_Relay: CODE, 521 0 39
+_Init_Ports: CODE, 688 0 14
+_HandleByte: CODE, 244 0 150
+Total: 691
