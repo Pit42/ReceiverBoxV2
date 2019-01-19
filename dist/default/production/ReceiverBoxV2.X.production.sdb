@@ -76,9 +76,9 @@ End2 6
 [v _SetStopTime SetStopTime `(v  1 e 1 0 ]
 "244
 [v _Handle_Telegram Handle_Telegram `(v  1 e 1 0 ]
-"361
+"369
 [v _HandleConfigByte HandleConfigByte `(v  1 e 1 0 ]
-"432
+"440
 [v _Handle_Interrupts Handle_Interrupts `II(v  1 e 1 0 ]
 "47 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\RelayControl.c
 [v _Init_Relays Init_Relays `(v  1 e 1 0 ]
@@ -380,7 +380,7 @@ End2 6
 [s S22 . 21 `uc 1 Start 1 0 `uc 1 Address 1 1 `uc 1 Commandlength 1 2 `[16]uc 1 Command 16 3 `[2]uc 1 End 2 19 ]
 "244
 [v Handle_Telegram@ThisTelegram ThisTelegram `S22  1 p 21 25 ]
-"359
+"367
 } 0
 "187
 [v _SetStopTime SetStopTime `(v  1 e 1 0 ]
@@ -435,12 +435,12 @@ End2 6
 [v Set_Relay@Relay Relay `uc  1 a 1 3 ]
 "159
 } 0
-"432 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\Main.c
+"440 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\Main.c
 [v _Handle_Interrupts Handle_Interrupts `II(v  1 e 1 0 ]
 {
-"458
+"466
 [v Handle_Interrupts@dummy dummy `uc  1 a 1 12 ]
-"477
+"485
 } 0
 "138 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\Eusart.c
 [v _WriteByteFromBuffer WriteByteFromBuffer `(v  1 e 1 0 ]
@@ -472,14 +472,14 @@ End2 6
 [v HandleTelegramByte@CommandCounter CommandCounter `uc  1 s 1 CommandCounter ]
 "54
 } 0
-"361 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\Main.c
+"369 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\Main.c
 [v _HandleConfigByte HandleConfigByte `(v  1 e 1 0 ]
 {
-"365
+"373
 [v HandleConfigByte@Byte Byte `uc  1 a 1 6 ]
-"363
+"371
 [v HandleConfigByte@ByteCounter ByteCounter `uc  1 s 1 ByteCounter ]
-"430
+"438
 } 0
 "64 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\RelayControl.c
 [v i1_Set_Relay Set_Relay `(v  1 e 1 0 ]

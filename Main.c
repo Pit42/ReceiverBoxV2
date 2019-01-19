@@ -267,6 +267,14 @@ void Handle_Telegram (TelegramType ThisTelegram)
 
         error = 1;
     }
+    else if (ThisTelegram.Command[0] == 'W')
+    {
+        ThisTelegram.Commandlength = 2;
+        ThisTelegram.Command[0] = 'R';
+        ThisTelegram.Command[1] = 'B';
+
+        error = 2;
+    }
     else
     {
         error = 4;

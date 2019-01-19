@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\ReceiverBoxV2.X.production.sym \
   --cmf=dist/default/production\ReceiverBoxV2.X.production.cmf -z -Q16F688 \
-  -oC:\Users\Bendixen\AppData\Local\Temp\s2sc.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Bendixen\AppData\Local\Temp\s818.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/ReceiverBoxV2.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0120h-016fh -pstack=STACK -ACODE=00h-07FFhx2 \
   -ASTRCODE=00h-0FFFh -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\Bendixen\AppData\Local\Temp\s2sc.o \
+  -DENTRY=2 -k C:\Users\Bendixen\AppData\Local\Temp\s818.o \
   dist/default/production\ReceiverBoxV2.X.production.o 
 
 Object code version is 3.11
@@ -28,42 +28,42 @@ Machine type is 16F688
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Bendixen\AppData\Local\Temp\s2sc.o
+C:\Users\Bendixen\AppData\Local\Temp\s818.o
                 end_init                              D        D        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             2007     2007        1     400E       0
 dist/default/production\ReceiverBoxV2.X.production.o
                 cinit                                 F        F       11        8       0
                 intentry                              4        4        9        8       0
-                text22                              F8A      F8A        9     1F14       0
-                text21                              FCA      FCA       1A     1F94       0
+                text22                              F74      F74        9     1EE8       0
+                text21                              FC1      FC1       1A     1F82       0
                 swtext3                             818      818        C     1000       0
-                text20                              392      392       96        8       0
-                text19                              4BC      4BC       8B        8       0
-                text18                              428      428       94        8       0
-                text17                              769      769       37        8       0
-                text16                              F7C      F7C        6     1EF8       0
-                text15                              7A0      7A0       2B        8       0
-                text14                              6A2      6A2       56        8       0
+                text20                              3AA      3AA       96        8       0
+                text19                              4D4      4D4       8B        8       0
+                text18                              440      440       94        8       0
+                text17                              781      781       37        8       0
+                text16                              F66      F66        6     1ECC       0
+                text15                              7B8      7B8       2B        8       0
+                text14                              6BA      6BA       56        8       0
                 swtext2                             80C      80C        C     1000       0
-                text13                              547      547       80        8       0
-                text12                              217      217      17B        8       0
+                text13                              55F      55F       80        8       0
+                text12                              22F      22F      17B        8       0
                 swtext1                             800      800        C     1000       0
-                text11                              731      731       38        8       0
-                text10                              FE4      FE4       1C     1FC8       0
-                text9                               6F8      6F8       39        8       0
-                text8                               5C7      5C7       75        8       0
-                text7                                20       20      1F7        8       0
-                text6                               FB6      FB6       14     1F6C       0
-                text5                               7F0      7F0        D        8       0
-                text4                               7CB      7CB       25        8       0
-                text3                               F9E      F9E        C     1F3C       0
-                text2                               FAA      FAA        C     1F54       0
-                text1                               F93      F93        B     1F26       0
-                maintext                            63C      63C       66        8       0
+                text11                              749      749       38        8       0
+                text10                              7E3      7E3       1C        8       0
+                text9                               710      710       39        8       0
+                text8                               5DF      5DF       75        8       0
+                text7                                20       20      20F        8       0
+                text6                               FAD      FAD       14     1F5A       0
+                text5                               FA0      FA0        D     1F40       0
+                text4                               FDB      FDB       25     1FB6       0
+                text3                               F88      F88        C     1F10       0
+                text2                               F94      F94        C     1F28       0
+                text1                               F7D      F7D        B     1EFA       0
+                maintext                            654      654       66        8       0
                 cstackBANK0                          20       20       38       20       1
                 cstackCOMMON                         70       70        D       70       1
-                clrtext                             F82      F82        8     1F04       0
+                clrtext                             F6C      F6C        8     1ED8       0
                 bssBANK1                             A0       A0       4E       A0       1
                 bssBANK0                             58       58       17       20       1
                 bssCOMMON                            7D       7D        1       70       1
@@ -76,30 +76,30 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                 F        F       11         0
                 intentry                              4        4        9         0
                 reset_vec                             0        0        2         0
-                text22                              F8A      F8A        9         0
-                text21                              FCA      FCA       1A         0
-                text20                              392      392       96         0
-                text19                              4BC      4BC       8B         0
-                text18                              428      428       94         0
-                text17                              769      769       37         0
-                text16                              F7C      F7C        6         0
-                text15                              7A0      7A0       2B         0
-                text14                              6A2      6A2       56         0
-                text13                              547      547       80         0
-                text12                              217      217      17B         0
-                text11                              731      731       38         0
-                text10                              FE4      FE4       1C         0
-                text9                               6F8      6F8       39         0
-                text8                               5C7      5C7       75         0
-                text7                                20       20      1F7         0
-                text6                               FB6      FB6       14         0
-                text5                               7F0      7F0        D         0
-                text4                               7CB      7CB       25         0
-                text3                               F9E      F9E        C         0
-                text2                               FAA      FAA        C         0
-                text1                               F93      F93        B         0
-                maintext                            63C      63C       66         0
-                clrtext                             F82      F82        8         0
+                text22                              F74      F74        9         0
+                text21                              FC1      FC1       1A         0
+                text20                              3AA      3AA       96         0
+                text19                              4D4      4D4       8B         0
+                text18                              440      440       94         0
+                text17                              781      781       37         0
+                text16                              F66      F66        6         0
+                text15                              7B8      7B8       2B         0
+                text14                              6BA      6BA       56         0
+                text13                              55F      55F       80         0
+                text12                              22F      22F      17B         0
+                text11                              749      749       38         0
+                text10                              7E3      7E3       1C         0
+                text9                               710      710       39         0
+                text8                               5DF      5DF       75         0
+                text7                                20       20      20F         0
+                text6                               FAD      FAD       14         0
+                text5                               FA0      FA0        D         0
+                text4                               FDB      FDB       25         0
+                text3                               F88      F88        C         0
+                text2                               F94      F94        C         0
+                text1                               F7D      F7D        B         0
+                maintext                            654      654       66         0
+                clrtext                             F6C      F6C        8         0
 
         CLASS   STRCODE        
 
@@ -152,20 +152,21 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  0007F9  0007FD         8       0  CODE        2
+                intentry                       000004  0007FB  0007FF         8       0  CODE        2
                 cstackBANK0                    000020  00004F  00006F        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 bssBANK1                       0000A0  00004E  0000EE        A0       1  BANK1       1
                 swtext1                        000800  000024  000824      1000       0  CONST       2
-                text16                         000F7C  000006  000F82      1EF8       0  CODE        2
-                clrtext                        000F82  000008  000F8A      1F04       0  CODE        2
-                text22                         000F8A  000009  000F93      1F14       0  CODE        2
-                text1                          000F93  00000B  000F9E      1F26       0  CODE        2
-                text3                          000F9E  00000C  000FAA      1F3C       0  CODE        2
-                text2                          000FAA  00000C  000FB6      1F54       0  CODE        2
-                text6                          000FB6  000014  000FCA      1F6C       0  CODE        2
-                text21                         000FCA  00001A  000FE4      1F94       0  CODE        2
-                text10                         000FE4  00001C  001000      1FC8       0  CODE        2
+                text16                         000F66  000006  000F6C      1ECC       0  CODE        2
+                clrtext                        000F6C  000008  000F74      1ED8       0  CODE        2
+                text22                         000F74  000009  000F7D      1EE8       0  CODE        2
+                text1                          000F7D  00000B  000F88      1EFA       0  CODE        2
+                text3                          000F88  00000C  000F94      1F10       0  CODE        2
+                text2                          000F94  00000C  000FA0      1F28       0  CODE        2
+                text5                          000FA0  00000D  000FAD      1F40       0  CODE        2
+                text6                          000FAD  000014  000FC1      1F5A       0  CODE        2
+                text21                         000FC1  00001A  000FDB      1F82       0  CODE        2
+                text4                          000FDB  000025  001000      1FB6       0  CODE        2
                 config                         002007  000001  002008      400E       0  CONFIG      2
 
 
@@ -176,15 +177,15 @@ UNUSED ADDRESS RANGES
         BANK1            00EE-00EF              2           1
         BANK2            0120-016F             50           1
         CODE             0002-0003              2           2
-                         07FD-07FF              3
-                         0824-0F7B            758
+                         07FF-07FF              1
+                         0824-0F65            742
         CONST            0002-0003              2           2
-                         07FD-07FF              3
-                         0824-0F7B            100
+                         07FF-07FF              1
+                         0824-0F65            100
         EEDATA           2100-21FF            100           2
         ENTRY            0002-0003              2           2
-                         07FD-07FF              3
-                         0824-0F7B            100
+                         07FF-07FF              1
+                         0824-0F65            100
         IDLOC            2000-2003              4           2
         RAM              006F-006F              1           1
                          00EE-00EF              2
@@ -195,11 +196,11 @@ UNUSED ADDRESS RANGES
         SFR3             0180-01EF             70           1
         STACK            0120-016F             50           1
         STRCODE          0002-0003              2           2
-                         07FD-07FF              3
-                         0824-0F7B            758
+                         07FF-07FF              1
+                         0824-0F65            742
         STRING           0002-0003              2           2
-                         07FD-07FF              3
-                         0824-0F7B            100
+                         07FF-07FF              1
+                         0824-0F65            100
 
                                   Symbol Table
 
@@ -225,27 +226,27 @@ Set_Relay@Relay                   cstackBANK0  0023
 Set_Relay@State                   cstackBANK0  0020
 Write_Byte@Data                   cstackCOMMON 0070
 _ANSEL                            (abs)        0091
-_AddByteToBuffer                  text10       0FE4
+_AddByteToBuffer                  text10       07E3
 _BAUDCTLbits                      (abs)        0011
 _BufferHead                       bssCOMMON    007D
 _BufferTail                       bssBANK0     0063
 _CMCON0bits                       (abs)        0019
-_CheckStopTime                    text12       0217
+_CheckStopTime                    text12       022F
 _Counter_100ms                    bssBANK0     005C
 _Counter_10sec                    bssBANK0     0058
 _Counter_1sec                     bssBANK0     005A
 _CurrentMode                      bssBANK0     0065
-_HandleConfigByte                 text19       04BC
-_HandleTelegramByte               text18       0428
-_Handle_Interrupts                text14       06A2
+_HandleConfigByte                 text19       04D4
+_HandleTelegramByte               text18       0440
+_Handle_Interrupts                text14       06BA
 _Handle_Telegram                  text7        0020
 _INTCONbits                       (abs)        000B
 _IOCAbits                         (abs)        0096
-_Init_Ports                       text6        0FB6
-_Init_Receiver                    text5        07F0
-_Init_Relays                      text4        07CB
-_Init_Timer                       text3        0F9E
-_Init_Transmitter                 text2        0FAA
+_Init_Ports                       text6        0FAD
+_Init_Receiver                    text5        0FA0
+_Init_Relays                      text4        0FDB
+_Init_Timer                       text3        0F88
+_Init_Transmitter                 text2        0F94
 _OSCCONbits                       (abs)        008F
 _PIE1bits                         (abs)        008C
 _PIR1bits                         (abs)        000C
@@ -254,8 +255,8 @@ _PORTAbits                        (abs)        0005
 _PORTCbits                        (abs)        0007
 _RCREG                            (abs)        0014
 _RCSTAbits                        (abs)        0017
-_Read_Byte                        text22       0F8A
-_Read_Relay                       text11       0731
+_Read_Byte                        text22       0F74
+_Read_Relay                       text11       0749
 _Relay1StopTime                   bssBANK0     006C
 _Relay2StopTime                   bssBANK1     00EB
 _Relay3StopTime                   bssBANK1     00E8
@@ -264,10 +265,10 @@ _Relay5StopTime                   bssBANK1     00E2
 _Relay6StopTime                   bssBANK1     00DF
 _SPBRG                            (abs)        0013
 _SendBuffer                       bssBANK1     00A0
-_SendTelegram                     text9        06F8
-_SetStopTime                      text8        05C7
-_Set_Relay                        text13       0547
-_Start_Timer                      text1        0F93
+_SendTelegram                     text9        0710
+_SetStopTime                      text8        05DF
+_Set_Relay                        text13       055F
+_Start_Timer                      text1        0F7D
 _StopRelay1OnTime                 bssBANK0     006B
 _StopRelay2OnTime                 bssBANK0     006A
 _StopRelay3OnTime                 bssBANK0     0069
@@ -283,9 +284,9 @@ _TXREG                            (abs)        0015
 _TXSTAbits                        (abs)        0016
 _Telegram                         bssBANK1     00C8
 _TelegramReadyFlag                bssBANK0     005E
-_Timer_Interrupt                  text17       0769
-_WriteByteFromBuffer              text15       07A0
-_Write_Byte                       text16       0F7C
+_Timer_Interrupt                  text17       0781
+_WriteByteFromBuffer              text15       07B8
+_Write_Byte                       text16       0F66
 __CFG_FOSC$INTOSCIO               (abs)        0000
 __CFG_MCLRE$OFF                   (abs)        0000
 __CFG_WDTE$OFF                    (abs)        0000
@@ -368,30 +369,30 @@ __S3                              (abs)        0000
 ___int_sp                         stack        0000
 ___latbits                        (abs)        0001
 ___sp                             stack        0000
-__end_of_AddByteToBuffer          text10       1000
-__end_of_CheckStopTime            text12       0392
-__end_of_HandleConfigByte         text19       0547
-__end_of_HandleTelegramByte       text18       04BC
-__end_of_Handle_Interrupts        text14       06F8
-__end_of_Handle_Telegram          text7        0217
-__end_of_Init_Ports               text6        0FCA
-__end_of_Init_Receiver            text5        07FD
-__end_of_Init_Relays              text4        07F0
-__end_of_Init_Timer               text3        0FAA
-__end_of_Init_Transmitter         text2        0FB6
-__end_of_Read_Byte                text22       0F93
-__end_of_Read_Relay               text11       0769
-__end_of_SendTelegram             text9        0731
-__end_of_SetStopTime              text8        063C
-__end_of_Set_Relay                text13       05C7
-__end_of_Start_Timer              text1        0F9E
-__end_of_Timer_Interrupt          text17       07A0
-__end_of_WriteByteFromBuffer      text15       07CB
-__end_of_Write_Byte               text16       0F82
+__end_of_AddByteToBuffer          text10       07FF
+__end_of_CheckStopTime            text12       03AA
+__end_of_HandleConfigByte         text19       055F
+__end_of_HandleTelegramByte       text18       04D4
+__end_of_Handle_Interrupts        text14       0710
+__end_of_Handle_Telegram          text7        022F
+__end_of_Init_Ports               text6        0FC1
+__end_of_Init_Receiver            text5        0FAD
+__end_of_Init_Relays              text4        1000
+__end_of_Init_Timer               text3        0F94
+__end_of_Init_Transmitter         text2        0FA0
+__end_of_Read_Byte                text22       0F7D
+__end_of_Read_Relay               text11       0781
+__end_of_SendTelegram             text9        0749
+__end_of_SetStopTime              text8        0654
+__end_of_Set_Relay                text13       05DF
+__end_of_Start_Timer              text1        0F88
+__end_of_Timer_Interrupt          text17       07B8
+__end_of_WriteByteFromBuffer      text15       07E3
+__end_of_Write_Byte               text16       0F6C
 __end_of__initialization          cinit        001D
-__end_of_main                     maintext     06A2
-__end_ofi1_AddByteToBuffer        text21       0FE4
-__end_ofi1_Set_Relay              text20       0428
+__end_of_main                     maintext     06BA
+__end_ofi1_AddByteToBuffer        text21       0FDB
+__end_ofi1_Set_Relay              text20       0440
 __initialization                  cinit        000F
 __pbssBANK0                       bssBANK0     0058
 __pbssBANK1                       bssBANK1     00A0
@@ -399,32 +400,32 @@ __pbssCOMMON                      bssCOMMON    007D
 __pcstackBANK0                    cstackBANK0  0020
 __pcstackCOMMON                   cstackCOMMON 0070
 __pintentry                       intentry     0004
-__pmaintext                       maintext     063C
+__pmaintext                       maintext     0654
 __pswtext1                        swtext1      0800
 __pswtext2                        swtext2      080C
 __pswtext3                        swtext3      0818
-__ptext1                          text1        0F93
-__ptext10                         text10       0FE4
-__ptext11                         text11       0731
-__ptext12                         text12       0217
-__ptext13                         text13       0547
-__ptext14                         text14       06A2
-__ptext15                         text15       07A0
-__ptext16                         text16       0F7C
-__ptext17                         text17       0769
-__ptext18                         text18       0428
-__ptext19                         text19       04BC
-__ptext2                          text2        0FAA
-__ptext20                         text20       0392
-__ptext21                         text21       0FCA
-__ptext22                         text22       0F8A
-__ptext3                          text3        0F9E
-__ptext4                          text4        07CB
-__ptext5                          text5        07F0
-__ptext6                          text6        0FB6
+__ptext1                          text1        0F7D
+__ptext10                         text10       07E3
+__ptext11                         text11       0749
+__ptext12                         text12       022F
+__ptext13                         text13       055F
+__ptext14                         text14       06BA
+__ptext15                         text15       07B8
+__ptext16                         text16       0F66
+__ptext17                         text17       0781
+__ptext18                         text18       0440
+__ptext19                         text19       04D4
+__ptext2                          text2        0F94
+__ptext20                         text20       03AA
+__ptext21                         text21       0FC1
+__ptext22                         text22       0F74
+__ptext3                          text3        0F88
+__ptext4                          text4        0FDB
+__ptext5                          text5        0FA0
+__ptext6                          text6        0FAD
 __ptext7                          text7        0020
-__ptext8                          text8        05C7
-__ptext9                          text9        06F8
+__ptext8                          text8        05DF
+__ptext9                          text9        0710
 __size_of_AddByteToBuffer         (abs)        0000
 __size_of_CheckStopTime           (abs)        0000
 __size_of_HandleConfigByte        (abs)        0000
@@ -448,15 +449,15 @@ __size_of_Write_Byte              (abs)        0000
 __size_of_main                    (abs)        0000
 __size_ofi1_AddByteToBuffer       (abs)        0000
 __size_ofi1_Set_Relay             (abs)        0000
-_main                             maintext     063C
+_main                             maintext     0654
 btemp                             (abs)        007E
-clear_ram0                        clrtext      0F82
+clear_ram0                        clrtext      0F6C
 end_of_initialization             cinit        001D
 i1AddByteToBuffer@Byte            cstackCOMMON 0071
 i1Set_Relay@Relay                 cstackCOMMON 0073
 i1Set_Relay@State                 cstackCOMMON 0070
-i1_AddByteToBuffer                text21       0FCA
-i1_Set_Relay                      text20       0392
+i1_AddByteToBuffer                text21       0FC1
+i1_Set_Relay                      text20       03AA
 interrupt_function                intentry     0004
 intlevel0                         functab      0000
 intlevel1                         functab      0000
@@ -920,7 +921,7 @@ Total ram usage:        4 bytes
 
  *************** function _Handle_Interrupts *****************
  Defined at:
-		line 432 in file "Main.c"
+		line 440 in file "Main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1071,7 +1072,7 @@ Total ram usage:        3 bytes
 
  *************** function _HandleConfigByte *****************
  Defined at:
-		line 361 in file "Main.c"
+		line 369 in file "Main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1195,50 +1196,50 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 Timer.c
-		_Init_Timer    		CODE           	0F9E	0000	13
-		_Timer_Interrupt		CODE           	0769	0000	56
-		_Start_Timer   		CODE           	0F93	0000	12
+		_Init_Timer    		CODE           	0F88	0000	13
+		_Timer_Interrupt		CODE           	0781	0000	56
+		_Start_Timer   		CODE           	0F7D	0000	12
 
 Timer.c estimated size: 81
 
 TelegramInterpreter.c
-		_SendTelegram  		CODE           	06F8	0000	58
-		_HandleTelegramByte		CODE           	0428	0000	149
+		_SendTelegram  		CODE           	0710	0000	58
+		_HandleTelegramByte		CODE           	0440	0000	149
 
 TelegramInterpreter.c estimated size: 207
 
 Eusart.c
-		_Read_Byte     		CODE           	0F8A	0000	10
-		_Write_Byte    		CODE           	0F7C	0000	7
-		_WriteByteFromBuffer		CODE           	07A0	0000	44
-		_Init_Transmitter		CODE           	0FAA	0000	13
-		_AddByteToBuffer		CODE           	0FE4	0000	29
-		_Init_Receiver 		CODE           	07F0	0000	14
+		_Read_Byte     		CODE           	0F74	0000	10
+		_Write_Byte    		CODE           	0F66	0000	7
+		_WriteByteFromBuffer		CODE           	07B8	0000	44
+		_Init_Transmitter		CODE           	0F94	0000	13
+		_AddByteToBuffer		CODE           	07E3	0000	29
+		_Init_Receiver 		CODE           	0FA0	0000	14
 
 Eusart.c estimated size: 117
 
 RelayControl.c
-		_Set_Relay     		CODE           	0547	0000	129
-		_Init_Relays   		CODE           	07CB	0000	38
-		_Read_Relay    		CODE           	0731	0000	57
+		_Set_Relay     		CODE           	055F	0000	129
+		_Init_Relays   		CODE           	0FDB	0000	38
+		_Read_Relay    		CODE           	0749	0000	57
 
 RelayControl.c estimated size: 224
 
 Main.c
-		_main          		CODE           	063C	0000	103
-		_Handle_Interrupts		CODE           	06A2	0000	87
-		_SetStopTime   		CODE           	05C7	0000	118
-		_Handle_Telegram		CODE           	0020	0000	504
-		_CheckStopTime 		CODE           	0217	0000	380
-		_HandleConfigByte		CODE           	04BC	0000	140
-		_Init_Ports    		CODE           	0FB6	0000	21
+		_main          		CODE           	0654	0000	103
+		_Handle_Interrupts		CODE           	06BA	0000	87
+		_SetStopTime   		CODE           	05DF	0000	118
+		_Handle_Telegram		CODE           	0020	0000	528
+		_CheckStopTime 		CODE           	022F	0000	380
+		_HandleConfigByte		CODE           	04D4	0000	140
+		_Init_Ports    		CODE           	0FAD	0000	21
 
-Main.c estimated size: 1353
+Main.c estimated size: 1377
 
 shared
-		i1_Set_Relay   		CODE           	0392	0000	151
+		i1_Set_Relay   		CODE           	03AA	0000	151
 		__initialization		CODE           	000F	0000	15
-		i1_AddByteToBuffer		CODE           	0FCA	0000	27
+		i1_AddByteToBuffer		CODE           	0FC1	0000	27
 
 shared estimated size: 193
 

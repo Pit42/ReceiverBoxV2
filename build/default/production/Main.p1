@@ -891,505 +891,529 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 120  ]
 "270
-[; ;Main.c: 270:     else
+[; ;Main.c: 270:     else if (ThisTelegram.Command[0] == 'W')
 [e :U 119 ]
+[e $ ! == -> *U + &U . _ThisTelegram 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `ui -> 87 `ui 121  ]
 "271
 [; ;Main.c: 271:     {
 {
 "272
-[; ;Main.c: 272:         error = 4;
-[e = _error -> -> 4 `i `uc ]
+[; ;Main.c: 272:         ThisTelegram.Commandlength = 2;
+[e = . _ThisTelegram 2 -> -> 2 `i `uc ]
 "273
-[; ;Main.c: 273:     }
+[; ;Main.c: 273:         ThisTelegram.Command[0] = 'R';
+[e = *U + &U . _ThisTelegram 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux -> -> 82 `ui `uc ]
+"274
+[; ;Main.c: 274:         ThisTelegram.Command[1] = 'B';
+[e = *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux -> -> 66 `ui `uc ]
+"276
+[; ;Main.c: 276:         error = 2;
+[e = _error -> -> 2 `i `uc ]
+"277
+[; ;Main.c: 277:     }
 }
+[e $U 122  ]
+"278
+[; ;Main.c: 278:     else
+[e :U 121 ]
+"279
+[; ;Main.c: 279:     {
+{
+"280
+[; ;Main.c: 280:         error = 4;
+[e = _error -> -> 4 `i `uc ]
+"281
+[; ;Main.c: 281:     }
+}
+[e :U 122 ]
 [e :U 120 ]
 [e :U 118 ]
 [e :U 116 ]
-"275
-[; ;Main.c: 275:     SendTelegram(ThisTelegram);
-[e ( _SendTelegram (1 _ThisTelegram ]
-"277
-[; ;Main.c: 277:     if (error == 0)
-[e $ ! == -> _error `i -> 0 `i 121  ]
-"278
-[; ;Main.c: 278:     {
-{
-"279
-[; ;Main.c: 279:         if (state == On && (ThisTelegram.Command[1] !='0' || ThisTelegram.Command[2] !='0' || ThisTelegram.Command[3] !='0'))
-[e $ ! && == -> _state `i -> . `E943 1 `i || || != -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `ui -> 48 `ui != -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `ui -> 48 `ui != -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `ui -> 48 `ui 122  ]
-"280
-[; ;Main.c: 280:         {
-{
-"281
-[; ;Main.c: 281:             switch (ThisTelegram.Address)
-[e $U 124  ]
-"282
-[; ;Main.c: 282:             {
-{
 "283
-[; ;Main.c: 283:                 case '1':
-[e :U 125 ]
-"284
-[; ;Main.c: 284:                     Set_Relay(Relay1, state);
-[e ( _Set_Relay (2 , -> . `E936 0 `uc _state ]
+[; ;Main.c: 283:     SendTelegram(ThisTelegram);
+[e ( _SendTelegram (1 _ThisTelegram ]
 "285
-[; ;Main.c: 285:                     StopRelay1OnTime = 1;
-[e = _StopRelay1OnTime -> -> 1 `i `uc ]
+[; ;Main.c: 285:     if (error == 0)
+[e $ ! == -> _error `i -> 0 `i 123  ]
 "286
-[; ;Main.c: 286:                     SetStopTime(Relay1StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
-[e ( _SetStopTime (4 , , , &U _Relay1StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
+[; ;Main.c: 286:     {
+{
 "287
-[; ;Main.c: 287:                     break;
-[e $U 123  ]
+[; ;Main.c: 287:         if (state == On && (ThisTelegram.Command[1] !='0' || ThisTelegram.Command[2] !='0' || ThisTelegram.Command[3] !='0'))
+[e $ ! && == -> _state `i -> . `E943 1 `i || || != -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `ui -> 48 `ui != -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `ui -> 48 `ui != -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `ui -> 48 `ui 124  ]
+"288
+[; ;Main.c: 288:         {
+{
 "289
-[; ;Main.c: 289:                 case '2':
-[e :U 126 ]
+[; ;Main.c: 289:             switch (ThisTelegram.Address)
+[e $U 126  ]
 "290
-[; ;Main.c: 290:                     Set_Relay(Relay2, state);
-[e ( _Set_Relay (2 , -> . `E936 1 `uc _state ]
+[; ;Main.c: 290:             {
+{
 "291
-[; ;Main.c: 291:                     StopRelay2OnTime = 1;
-[e = _StopRelay2OnTime -> -> 1 `i `uc ]
-"292
-[; ;Main.c: 292:                     SetStopTime(Relay2StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
-[e ( _SetStopTime (4 , , , &U _Relay2StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
-"293
-[; ;Main.c: 293:                     break;
-[e $U 123  ]
-"295
-[; ;Main.c: 295:                 case '3':
+[; ;Main.c: 291:                 case '1':
 [e :U 127 ]
-"296
-[; ;Main.c: 296:                     Set_Relay(Relay3, state);
-[e ( _Set_Relay (2 , -> . `E936 2 `uc _state ]
-"297
-[; ;Main.c: 297:                     StopRelay3OnTime = 1;
-[e = _StopRelay3OnTime -> -> 1 `i `uc ]
-"298
-[; ;Main.c: 298:                     SetStopTime(Relay3StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
-[e ( _SetStopTime (4 , , , &U _Relay3StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
-"299
-[; ;Main.c: 299:                     break;
-[e $U 123  ]
-"301
-[; ;Main.c: 301:                 case '4':
-[e :U 128 ]
-"302
-[; ;Main.c: 302:                     Set_Relay(Relay4, state);
-[e ( _Set_Relay (2 , -> . `E936 3 `uc _state ]
-"303
-[; ;Main.c: 303:                     StopRelay4OnTime = 1;
-[e = _StopRelay4OnTime -> -> 1 `i `uc ]
-"304
-[; ;Main.c: 304:                     SetStopTime(Relay4StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
-[e ( _SetStopTime (4 , , , &U _Relay4StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
-"305
-[; ;Main.c: 305:                     break;
-[e $U 123  ]
-"307
-[; ;Main.c: 307:                 case '5':
-[e :U 129 ]
-"308
-[; ;Main.c: 308:                     Set_Relay(Relay5, state);
-[e ( _Set_Relay (2 , -> . `E936 4 `uc _state ]
-"309
-[; ;Main.c: 309:                     StopRelay5OnTime = 1;
-[e = _StopRelay5OnTime -> -> 1 `i `uc ]
-"310
-[; ;Main.c: 310:                     SetStopTime(Relay5StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
-[e ( _SetStopTime (4 , , , &U _Relay5StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
-"311
-[; ;Main.c: 311:                     break;
-[e $U 123  ]
-"313
-[; ;Main.c: 313:                 case '6':
-[e :U 130 ]
-"314
-[; ;Main.c: 314:                     Set_Relay(Relay6, state);
-[e ( _Set_Relay (2 , -> . `E936 5 `uc _state ]
-"315
-[; ;Main.c: 315:                     StopRelay6OnTime = 1;
-[e = _StopRelay6OnTime -> -> 1 `i `uc ]
-"316
-[; ;Main.c: 316:                     SetStopTime(Relay6StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
-[e ( _SetStopTime (4 , , , &U _Relay6StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
-"317
-[; ;Main.c: 317:                     break;
-[e $U 123  ]
-"318
-[; ;Main.c: 318:             }
-}
-[e $U 123  ]
-[e :U 124 ]
-[e [\ -> . _ThisTelegram 1 `i , $ -> -> 49 `ui `i 125
- , $ -> -> 50 `ui `i 126
- , $ -> -> 51 `ui `i 127
- , $ -> -> 52 `ui `i 128
- , $ -> -> 53 `ui `i 129
- , $ -> -> 54 `ui `i 130
- 123 ]
-[e :U 123 ]
-"319
-[; ;Main.c: 319:         }
-}
-[e $U 131  ]
-"320
-[; ;Main.c: 320:         else
-[e :U 122 ]
-"321
-[; ;Main.c: 321:         {
-{
-"322
-[; ;Main.c: 322:             switch (ThisTelegram.Address)
-[e $U 133  ]
-"323
-[; ;Main.c: 323:             {
-{
-"324
-[; ;Main.c: 324:                 case '1':
-[e :U 134 ]
-"325
-[; ;Main.c: 325:                     Set_Relay(Relay1, state);
+"292
+[; ;Main.c: 292:                     Set_Relay(Relay1, state);
 [e ( _Set_Relay (2 , -> . `E936 0 `uc _state ]
-"326
-[; ;Main.c: 326:                     StopRelay1OnTime = 0;
-[e = _StopRelay1OnTime -> -> 0 `i `uc ]
-"328
-[; ;Main.c: 328:                     break;
-[e $U 132  ]
-"330
-[; ;Main.c: 330:                 case '2':
-[e :U 135 ]
-"331
-[; ;Main.c: 331:                     Set_Relay(Relay2, state);
+"293
+[; ;Main.c: 293:                     StopRelay1OnTime = 1;
+[e = _StopRelay1OnTime -> -> 1 `i `uc ]
+"294
+[; ;Main.c: 294:                     SetStopTime(Relay1StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
+[e ( _SetStopTime (4 , , , &U _Relay1StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
+"295
+[; ;Main.c: 295:                     break;
+[e $U 125  ]
+"297
+[; ;Main.c: 297:                 case '2':
+[e :U 128 ]
+"298
+[; ;Main.c: 298:                     Set_Relay(Relay2, state);
 [e ( _Set_Relay (2 , -> . `E936 1 `uc _state ]
-"332
-[; ;Main.c: 332:                     StopRelay2OnTime = 0;
-[e = _StopRelay2OnTime -> -> 0 `i `uc ]
-"333
-[; ;Main.c: 333:                     break;
-[e $U 132  ]
-"335
-[; ;Main.c: 335:                 case '3':
-[e :U 136 ]
-"336
-[; ;Main.c: 336:                     Set_Relay(Relay3, state);
+"299
+[; ;Main.c: 299:                     StopRelay2OnTime = 1;
+[e = _StopRelay2OnTime -> -> 1 `i `uc ]
+"300
+[; ;Main.c: 300:                     SetStopTime(Relay2StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
+[e ( _SetStopTime (4 , , , &U _Relay2StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
+"301
+[; ;Main.c: 301:                     break;
+[e $U 125  ]
+"303
+[; ;Main.c: 303:                 case '3':
+[e :U 129 ]
+"304
+[; ;Main.c: 304:                     Set_Relay(Relay3, state);
 [e ( _Set_Relay (2 , -> . `E936 2 `uc _state ]
-"337
-[; ;Main.c: 337:                     StopRelay3OnTime = 0;
-[e = _StopRelay3OnTime -> -> 0 `i `uc ]
-"338
-[; ;Main.c: 338:                     break;
-[e $U 132  ]
-"340
-[; ;Main.c: 340:                 case '4':
-[e :U 137 ]
-"341
-[; ;Main.c: 341:                     Set_Relay(Relay4, state);
+"305
+[; ;Main.c: 305:                     StopRelay3OnTime = 1;
+[e = _StopRelay3OnTime -> -> 1 `i `uc ]
+"306
+[; ;Main.c: 306:                     SetStopTime(Relay3StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
+[e ( _SetStopTime (4 , , , &U _Relay3StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
+"307
+[; ;Main.c: 307:                     break;
+[e $U 125  ]
+"309
+[; ;Main.c: 309:                 case '4':
+[e :U 130 ]
+"310
+[; ;Main.c: 310:                     Set_Relay(Relay4, state);
 [e ( _Set_Relay (2 , -> . `E936 3 `uc _state ]
-"342
-[; ;Main.c: 342:                     StopRelay4OnTime = 0;
-[e = _StopRelay4OnTime -> -> 0 `i `uc ]
-"343
-[; ;Main.c: 343:                     break;
-[e $U 132  ]
-"345
-[; ;Main.c: 345:                 case '5':
-[e :U 138 ]
-"346
-[; ;Main.c: 346:                     Set_Relay(Relay5, state);
-[e ( _Set_Relay (2 , -> . `E936 4 `uc _state ]
-"347
-[; ;Main.c: 347:                     StopRelay5OnTime = 0;
-[e = _StopRelay5OnTime -> -> 0 `i `uc ]
-"348
-[; ;Main.c: 348:                     break;
-[e $U 132  ]
-"350
-[; ;Main.c: 350:                 case '6':
-[e :U 139 ]
-"351
-[; ;Main.c: 351:                     Set_Relay(Relay6, state);
-[e ( _Set_Relay (2 , -> . `E936 5 `uc _state ]
-"352
-[; ;Main.c: 352:                     StopRelay6OnTime = 0;
-[e = _StopRelay6OnTime -> -> 0 `i `uc ]
-"353
-[; ;Main.c: 353:                     break;
-[e $U 132  ]
-"355
-[; ;Main.c: 355:             }
-}
-[e $U 132  ]
-[e :U 133 ]
-[e [\ -> . _ThisTelegram 1 `i , $ -> -> 49 `ui `i 134
- , $ -> -> 50 `ui `i 135
- , $ -> -> 51 `ui `i 136
- , $ -> -> 52 `ui `i 137
- , $ -> -> 53 `ui `i 138
- , $ -> -> 54 `ui `i 139
- 132 ]
-[e :U 132 ]
-"357
-[; ;Main.c: 357:         }
-}
+"311
+[; ;Main.c: 311:                     StopRelay4OnTime = 1;
+[e = _StopRelay4OnTime -> -> 1 `i `uc ]
+"312
+[; ;Main.c: 312:                     SetStopTime(Relay4StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
+[e ( _SetStopTime (4 , , , &U _Relay4StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
+"313
+[; ;Main.c: 313:                     break;
+[e $U 125  ]
+"315
+[; ;Main.c: 315:                 case '5':
 [e :U 131 ]
-"358
-[; ;Main.c: 358:     }
+"316
+[; ;Main.c: 316:                     Set_Relay(Relay5, state);
+[e ( _Set_Relay (2 , -> . `E936 4 `uc _state ]
+"317
+[; ;Main.c: 317:                     StopRelay5OnTime = 1;
+[e = _StopRelay5OnTime -> -> 1 `i `uc ]
+"318
+[; ;Main.c: 318:                     SetStopTime(Relay5StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
+[e ( _SetStopTime (4 , , , &U _Relay5StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
+"319
+[; ;Main.c: 319:                     break;
+[e $U 125  ]
+"321
+[; ;Main.c: 321:                 case '6':
+[e :U 132 ]
+"322
+[; ;Main.c: 322:                     Set_Relay(Relay6, state);
+[e ( _Set_Relay (2 , -> . `E936 5 `uc _state ]
+"323
+[; ;Main.c: 323:                     StopRelay6OnTime = 1;
+[e = _StopRelay6OnTime -> -> 1 `i `uc ]
+"324
+[; ;Main.c: 324:                     SetStopTime(Relay6StopTime, ThisTelegram.Command[1] - 48, ThisTelegram.Command[2] - 48, ThisTelegram.Command[3] - 48);
+[e ( _SetStopTime (4 , , , &U _Relay6StopTime -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc -> - -> *U + &U . _ThisTelegram 3 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _ThisTelegram 3 `ui `ux `i -> 48 `i `uc ]
+"325
+[; ;Main.c: 325:                     break;
+[e $U 125  ]
+"326
+[; ;Main.c: 326:             }
 }
-[e :U 121 ]
+[e $U 125  ]
+[e :U 126 ]
+[e [\ -> . _ThisTelegram 1 `i , $ -> -> 49 `ui `i 127
+ , $ -> -> 50 `ui `i 128
+ , $ -> -> 51 `ui `i 129
+ , $ -> -> 52 `ui `i 130
+ , $ -> -> 53 `ui `i 131
+ , $ -> -> 54 `ui `i 132
+ 125 ]
+[e :U 125 ]
+"327
+[; ;Main.c: 327:         }
+}
+[e $U 133  ]
+"328
+[; ;Main.c: 328:         else
+[e :U 124 ]
+"329
+[; ;Main.c: 329:         {
+{
+"330
+[; ;Main.c: 330:             switch (ThisTelegram.Address)
+[e $U 135  ]
+"331
+[; ;Main.c: 331:             {
+{
+"332
+[; ;Main.c: 332:                 case '1':
+[e :U 136 ]
+"333
+[; ;Main.c: 333:                     Set_Relay(Relay1, state);
+[e ( _Set_Relay (2 , -> . `E936 0 `uc _state ]
+"334
+[; ;Main.c: 334:                     StopRelay1OnTime = 0;
+[e = _StopRelay1OnTime -> -> 0 `i `uc ]
+"336
+[; ;Main.c: 336:                     break;
+[e $U 134  ]
+"338
+[; ;Main.c: 338:                 case '2':
+[e :U 137 ]
+"339
+[; ;Main.c: 339:                     Set_Relay(Relay2, state);
+[e ( _Set_Relay (2 , -> . `E936 1 `uc _state ]
+"340
+[; ;Main.c: 340:                     StopRelay2OnTime = 0;
+[e = _StopRelay2OnTime -> -> 0 `i `uc ]
+"341
+[; ;Main.c: 341:                     break;
+[e $U 134  ]
+"343
+[; ;Main.c: 343:                 case '3':
+[e :U 138 ]
+"344
+[; ;Main.c: 344:                     Set_Relay(Relay3, state);
+[e ( _Set_Relay (2 , -> . `E936 2 `uc _state ]
+"345
+[; ;Main.c: 345:                     StopRelay3OnTime = 0;
+[e = _StopRelay3OnTime -> -> 0 `i `uc ]
+"346
+[; ;Main.c: 346:                     break;
+[e $U 134  ]
+"348
+[; ;Main.c: 348:                 case '4':
+[e :U 139 ]
+"349
+[; ;Main.c: 349:                     Set_Relay(Relay4, state);
+[e ( _Set_Relay (2 , -> . `E936 3 `uc _state ]
+"350
+[; ;Main.c: 350:                     StopRelay4OnTime = 0;
+[e = _StopRelay4OnTime -> -> 0 `i `uc ]
+"351
+[; ;Main.c: 351:                     break;
+[e $U 134  ]
+"353
+[; ;Main.c: 353:                 case '5':
+[e :U 140 ]
+"354
+[; ;Main.c: 354:                     Set_Relay(Relay5, state);
+[e ( _Set_Relay (2 , -> . `E936 4 `uc _state ]
+"355
+[; ;Main.c: 355:                     StopRelay5OnTime = 0;
+[e = _StopRelay5OnTime -> -> 0 `i `uc ]
+"356
+[; ;Main.c: 356:                     break;
+[e $U 134  ]
+"358
+[; ;Main.c: 358:                 case '6':
+[e :U 141 ]
 "359
-[; ;Main.c: 359: }
+[; ;Main.c: 359:                     Set_Relay(Relay6, state);
+[e ( _Set_Relay (2 , -> . `E936 5 `uc _state ]
+"360
+[; ;Main.c: 360:                     StopRelay6OnTime = 0;
+[e = _StopRelay6OnTime -> -> 0 `i `uc ]
+"361
+[; ;Main.c: 361:                     break;
+[e $U 134  ]
+"363
+[; ;Main.c: 363:             }
+}
+[e $U 134  ]
+[e :U 135 ]
+[e [\ -> . _ThisTelegram 1 `i , $ -> -> 49 `ui `i 136
+ , $ -> -> 50 `ui `i 137
+ , $ -> -> 51 `ui `i 138
+ , $ -> -> 52 `ui `i 139
+ , $ -> -> 53 `ui `i 140
+ , $ -> -> 54 `ui `i 141
+ 134 ]
+[e :U 134 ]
+"365
+[; ;Main.c: 365:         }
+}
+[e :U 133 ]
+"366
+[; ;Main.c: 366:     }
+}
+[e :U 123 ]
+"367
+[; ;Main.c: 367: }
 [e :UE 114 ]
 }
-"361
-[; ;Main.c: 361: void HandleConfigByte (void)
+"369
+[; ;Main.c: 369: void HandleConfigByte (void)
 [v _HandleConfigByte `(v ~T0 @X0 1 ef ]
-"362
-[; ;Main.c: 362: {
+"370
+[; ;Main.c: 370: {
 {
 [e :U _HandleConfigByte ]
 [f ]
-"363
-[; ;Main.c: 363:     static unsigned char ByteCounter = 0;
+"371
+[; ;Main.c: 371:     static unsigned char ByteCounter = 0;
 [v F983 `uc ~T0 @X0 1 s ByteCounter ]
 [i F983
 -> -> 0 `i `uc
 ]
-"365
-[; ;Main.c: 365:     unsigned char Byte;
-[v _Byte `uc ~T0 @X0 1 a ]
-"366
-[; ;Main.c: 366:     Byte = Read_Byte();
-[e = _Byte ( _Read_Byte ..  ]
-"368
-[; ;Main.c: 368:     if (Byte == '>')
-[e $ ! == -> _Byte `ui -> 62 `ui 141  ]
-"369
-[; ;Main.c: 369:     {
-{
-"370
-[; ;Main.c: 370:         switch (ByteCounter)
-[e $U 143  ]
-"371
-[; ;Main.c: 371:         {
-{
-"372
-[; ;Main.c: 372:             case 0:
-[e :U 144 ]
 "373
-[; ;Main.c: 373:                 ByteCounter = ByteCounter + 1;
-[e = F983 -> + -> F983 `i -> 1 `i `uc ]
+[; ;Main.c: 373:     unsigned char Byte;
+[v _Byte `uc ~T0 @X0 1 a ]
+"374
+[; ;Main.c: 374:     Byte = Read_Byte();
+[e = _Byte ( _Read_Byte ..  ]
+"376
+[; ;Main.c: 376:     if (Byte == '>')
+[e $ ! == -> _Byte `ui -> 62 `ui 143  ]
 "377
-[; ;Main.c: 377:                 PORTAbits.RA5 = 1;
-[e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
+[; ;Main.c: 377:     {
+{
 "378
-[; ;Main.c: 378:                 TRISAbits.TRISA5 = 1;
-[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
+[; ;Main.c: 378:         switch (ByteCounter)
+[e $U 145  ]
+"379
+[; ;Main.c: 379:         {
+{
+"380
+[; ;Main.c: 380:             case 0:
+[e :U 146 ]
 "381
-[; ;Main.c: 381:                 AddByteToBuffer('M');
-[e ( _AddByteToBuffer (1 -> -> 77 `ui `uc ]
-"382
-[; ;Main.c: 382:                 break;
-[e $U 142  ]
-"384
-[; ;Main.c: 384:             case 1:
-[e :U 145 ]
-"385
-[; ;Main.c: 385:                 ByteCounter = ByteCounter + 1;
+[; ;Main.c: 381:                 ByteCounter = ByteCounter + 1;
 [e = F983 -> + -> F983 `i -> 1 `i `uc ]
-"388
-[; ;Main.c: 388:                 AddByteToBuffer(0x31);
-[e ( _AddByteToBuffer (1 -> -> 49 `i `uc ]
+"385
+[; ;Main.c: 385:                 PORTAbits.RA5 = 1;
+[e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
+"386
+[; ;Main.c: 386:                 TRISAbits.TRISA5 = 1;
+[e = . . _TRISAbits 0 5 -> -> 1 `i `uc ]
 "389
-[; ;Main.c: 389:                 AddByteToBuffer(0x01);
-[e ( _AddByteToBuffer (1 -> -> 1 `i `uc ]
+[; ;Main.c: 389:                 AddByteToBuffer('M');
+[e ( _AddByteToBuffer (1 -> -> 77 `ui `uc ]
+"390
+[; ;Main.c: 390:                 break;
+[e $U 144  ]
 "392
-[; ;Main.c: 392:                 AddByteToBuffer(0x32);
-[e ( _AddByteToBuffer (1 -> -> 50 `i `uc ]
+[; ;Main.c: 392:             case 1:
+[e :U 147 ]
 "393
-[; ;Main.c: 393:                 AddByteToBuffer(0x00);
-[e ( _AddByteToBuffer (1 -> -> 0 `i `uc ]
+[; ;Main.c: 393:                 ByteCounter = ByteCounter + 1;
+[e = F983 -> + -> F983 `i -> 1 `i `uc ]
 "396
-[; ;Main.c: 396:                 AddByteToBuffer(0x33);
-[e ( _AddByteToBuffer (1 -> -> 51 `i `uc ]
+[; ;Main.c: 396:                 AddByteToBuffer(0x31);
+[e ( _AddByteToBuffer (1 -> -> 49 `i `uc ]
 "397
-[; ;Main.c: 397:                 AddByteToBuffer(0x00);
-[e ( _AddByteToBuffer (1 -> -> 0 `i `uc ]
+[; ;Main.c: 397:                 AddByteToBuffer(0x01);
+[e ( _AddByteToBuffer (1 -> -> 1 `i `uc ]
 "400
-[; ;Main.c: 400:                 AddByteToBuffer(0x34);
-[e ( _AddByteToBuffer (1 -> -> 52 `i `uc ]
+[; ;Main.c: 400:                 AddByteToBuffer(0x32);
+[e ( _AddByteToBuffer (1 -> -> 50 `i `uc ]
 "401
 [; ;Main.c: 401:                 AddByteToBuffer(0x00);
 [e ( _AddByteToBuffer (1 -> -> 0 `i `uc ]
 "404
-[; ;Main.c: 404:                 AddByteToBuffer(0xFF);
-[e ( _AddByteToBuffer (1 -> -> 255 `i `uc ]
+[; ;Main.c: 404:                 AddByteToBuffer(0x33);
+[e ( _AddByteToBuffer (1 -> -> 51 `i `uc ]
 "405
-[; ;Main.c: 405:                 break;
-[e $U 142  ]
-"407
-[; ;Main.c: 407:             case 2:
-[e :U 146 ]
+[; ;Main.c: 405:                 AddByteToBuffer(0x00);
+[e ( _AddByteToBuffer (1 -> -> 0 `i `uc ]
+"408
+[; ;Main.c: 408:                 AddByteToBuffer(0x34);
+[e ( _AddByteToBuffer (1 -> -> 52 `i `uc ]
 "409
-[; ;Main.c: 409:                 ByteCounter = 0;
-[e = F983 -> -> 0 `i `uc ]
+[; ;Main.c: 409:                 AddByteToBuffer(0x00);
+[e ( _AddByteToBuffer (1 -> -> 0 `i `uc ]
 "412
-[; ;Main.c: 412:                 AddByteToBuffer('X');
-[e ( _AddByteToBuffer (1 -> -> 88 `ui `uc ]
-"414
-[; ;Main.c: 414:                 Set_Relay(Relay1, Off);
-[e ( _Set_Relay (2 , -> . `E936 0 `uc -> . `E943 0 `uc ]
+[; ;Main.c: 412:                 AddByteToBuffer(0xFF);
+[e ( _AddByteToBuffer (1 -> -> 255 `i `uc ]
+"413
+[; ;Main.c: 413:                 break;
+[e $U 144  ]
 "415
-[; ;Main.c: 415:                 Set_Relay(Relay2, Off);
-[e ( _Set_Relay (2 , -> . `E936 1 `uc -> . `E943 0 `uc ]
-"416
-[; ;Main.c: 416:                 Set_Relay(Relay3, Off);
-[e ( _Set_Relay (2 , -> . `E936 2 `uc -> . `E943 0 `uc ]
+[; ;Main.c: 415:             case 2:
+[e :U 148 ]
 "417
-[; ;Main.c: 417:                 Set_Relay(Relay4, Off);
-[e ( _Set_Relay (2 , -> . `E936 3 `uc -> . `E943 0 `uc ]
-"418
-[; ;Main.c: 418:                 Set_Relay(Relay5, Off);
-[e ( _Set_Relay (2 , -> . `E936 4 `uc -> . `E943 0 `uc ]
-"419
-[; ;Main.c: 419:                 Set_Relay(Relay6, Off);
-[e ( _Set_Relay (2 , -> . `E936 5 `uc -> . `E943 0 `uc ]
-"421
-[; ;Main.c: 421:                 CurrentMode = Running;
-[e = _CurrentMode -> . `E952 0 `uc ]
+[; ;Main.c: 417:                 ByteCounter = 0;
+[e = F983 -> -> 0 `i `uc ]
+"420
+[; ;Main.c: 420:                 AddByteToBuffer('X');
+[e ( _AddByteToBuffer (1 -> -> 88 `ui `uc ]
+"422
+[; ;Main.c: 422:                 Set_Relay(Relay1, Off);
+[e ( _Set_Relay (2 , -> . `E936 0 `uc -> . `E943 0 `uc ]
+"423
+[; ;Main.c: 423:                 Set_Relay(Relay2, Off);
+[e ( _Set_Relay (2 , -> . `E936 1 `uc -> . `E943 0 `uc ]
 "424
-[; ;Main.c: 424:                 INTCONbits.RAIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;Main.c: 424:                 Set_Relay(Relay3, Off);
+[e ( _Set_Relay (2 , -> . `E936 2 `uc -> . `E943 0 `uc ]
+"425
+[; ;Main.c: 425:                 Set_Relay(Relay4, Off);
+[e ( _Set_Relay (2 , -> . `E936 3 `uc -> . `E943 0 `uc ]
 "426
-[; ;Main.c: 426:         }
+[; ;Main.c: 426:                 Set_Relay(Relay5, Off);
+[e ( _Set_Relay (2 , -> . `E936 4 `uc -> . `E943 0 `uc ]
+"427
+[; ;Main.c: 427:                 Set_Relay(Relay6, Off);
+[e ( _Set_Relay (2 , -> . `E936 5 `uc -> . `E943 0 `uc ]
+"429
+[; ;Main.c: 429:                 CurrentMode = Running;
+[e = _CurrentMode -> . `E952 0 `uc ]
+"432
+[; ;Main.c: 432:                 INTCONbits.RAIE = 1;
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"434
+[; ;Main.c: 434:         }
 }
-[e $U 142  ]
+[e $U 144  ]
+[e :U 145 ]
+[e [\ -> F983 `i , $ -> 0 `i 146
+ , $ -> 1 `i 147
+ , $ -> 2 `i 148
+ 144 ]
+[e :U 144 ]
+"436
+[; ;Main.c: 436:     }
+}
 [e :U 143 ]
-[e [\ -> F983 `i , $ -> 0 `i 144
- , $ -> 1 `i 145
- , $ -> 2 `i 146
- 142 ]
-[e :U 142 ]
-"428
-[; ;Main.c: 428:     }
-}
-[e :U 141 ]
-"430
-[; ;Main.c: 430: }
-[e :UE 140 ]
+"438
+[; ;Main.c: 438: }
+[e :UE 142 ]
 }
 [v $root$_Handle_Interrupts `(v ~T0 @X0 0 e ]
-"432
-[; ;Main.c: 432: void __attribute__((picinterrupt(""))) Handle_Interrupts (void)
+"440
+[; ;Main.c: 440: void __attribute__((picinterrupt(""))) Handle_Interrupts (void)
 [v _Handle_Interrupts `(v ~T2 @X0 1 ef ]
-"433
-[; ;Main.c: 433: {
+"441
+[; ;Main.c: 441: {
 {
 [e :U _Handle_Interrupts ]
 [f ]
-"434
-[; ;Main.c: 434:     if (PIR1bits.TXIF)
-[e $ ! != -> . . _PIR1bits 0 1 `i -> 0 `i 148  ]
-"435
-[; ;Main.c: 435:     {
-{
-"436
-[; ;Main.c: 436:         WriteByteFromBuffer();
-[e ( _WriteByteFromBuffer ..  ]
-"437
-[; ;Main.c: 437:     }
-}
-[e :U 148 ]
-"439
-[; ;Main.c: 439:     if (PIR1bits.RCIF)
-[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 149  ]
-"440
-[; ;Main.c: 440:     {
-{
-"441
-[; ;Main.c: 441:         switch (CurrentMode)
-[e $U 151  ]
 "442
-[; ;Main.c: 442:         {
-{
+[; ;Main.c: 442:     if (PIR1bits.TXIF)
+[e $ ! != -> . . _PIR1bits 0 1 `i -> 0 `i 150  ]
 "443
-[; ;Main.c: 443:             case Running:
-[e :U 152 ]
-"444
-[; ;Main.c: 444:                 HandleTelegramByte();
-[e ( _HandleTelegramByte ..  ]
-"445
-[; ;Main.c: 445:                 break;
-[e $U 150  ]
-"447
-[; ;Main.c: 447:             case Config:
-[e :U 153 ]
-"448
-[; ;Main.c: 448:                 HandleConfigByte();
-[e ( _HandleConfigByte ..  ]
-"449
-[; ;Main.c: 449:                 break;
-[e $U 150  ]
-"450
-[; ;Main.c: 450:         }
-}
-[e $U 150  ]
-[e :U 151 ]
-[e [\ -> _CurrentMode `i , $ . `E952 0 152
- , $ . `E952 1 153
- 150 ]
-[e :U 150 ]
-"452
-[; ;Main.c: 452:     }
-}
-[e :U 149 ]
-"454
-[; ;Main.c: 454:     if (INTCONbits.RAIF)
-[e $ ! != -> . . _INTCONbits 0 0 `i -> 0 `i 154  ]
-"455
-[; ;Main.c: 455:     {
+[; ;Main.c: 443:     {
 {
+"444
+[; ;Main.c: 444:         WriteByteFromBuffer();
+[e ( _WriteByteFromBuffer ..  ]
+"445
+[; ;Main.c: 445:     }
+}
+[e :U 150 ]
+"447
+[; ;Main.c: 447:     if (PIR1bits.RCIF)
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 151  ]
+"448
+[; ;Main.c: 448:     {
+{
+"449
+[; ;Main.c: 449:         switch (CurrentMode)
+[e $U 153  ]
+"450
+[; ;Main.c: 450:         {
+{
+"451
+[; ;Main.c: 451:             case Running:
+[e :U 154 ]
+"452
+[; ;Main.c: 452:                 HandleTelegramByte();
+[e ( _HandleTelegramByte ..  ]
+"453
+[; ;Main.c: 453:                 break;
+[e $U 152  ]
+"455
+[; ;Main.c: 455:             case Config:
+[e :U 155 ]
+"456
+[; ;Main.c: 456:                 HandleConfigByte();
+[e ( _HandleConfigByte ..  ]
 "457
-[; ;Main.c: 457:         INTCONbits.RAIE = 0;
-[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+[; ;Main.c: 457:                 break;
+[e $U 152  ]
 "458
-[; ;Main.c: 458:         unsigned char dummy = PORTA;
+[; ;Main.c: 458:         }
+}
+[e $U 152  ]
+[e :U 153 ]
+[e [\ -> _CurrentMode `i , $ . `E952 0 154
+ , $ . `E952 1 155
+ 152 ]
+[e :U 152 ]
+"460
+[; ;Main.c: 460:     }
+}
+[e :U 151 ]
+"462
+[; ;Main.c: 462:     if (INTCONbits.RAIF)
+[e $ ! != -> . . _INTCONbits 0 0 `i -> 0 `i 156  ]
+"463
+[; ;Main.c: 463:     {
+{
+"465
+[; ;Main.c: 465:         INTCONbits.RAIE = 0;
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+"466
+[; ;Main.c: 466:         unsigned char dummy = PORTA;
 [v _dummy `uc ~T0 @X0 1 a ]
 [e = _dummy _PORTA ]
-"459
-[; ;Main.c: 459:         INTCONbits.RAIF = 0;
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"462
-[; ;Main.c: 462:         CurrentMode = Config;
-[e = _CurrentMode -> . `E952 1 `uc ]
-"465
-[; ;Main.c: 465:         TRISAbits.TRISA5 = 0;
-[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
 "467
-[; ;Main.c: 467:         PORTAbits.RA5 = 0;
-[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
-"469
-[; ;Main.c: 469:     }
-}
-[e :U 154 ]
-"471
-[; ;Main.c: 471:     if (PIR1bits.TMR1IF)
-[e $ ! != -> . . _PIR1bits 0 0 `i -> 0 `i 155  ]
-"472
-[; ;Main.c: 472:     {
-{
+[; ;Main.c: 467:         INTCONbits.RAIF = 0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+"470
+[; ;Main.c: 470:         CurrentMode = Config;
+[e = _CurrentMode -> . `E952 1 `uc ]
 "473
-[; ;Main.c: 473:         PIR1bits.TMR1IF = 0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"474
-[; ;Main.c: 474:         Timer_Interrupt();
-[e ( _Timer_Interrupt ..  ]
-"476
-[; ;Main.c: 476:     }
-}
-[e :U 155 ]
+[; ;Main.c: 473:         TRISAbits.TRISA5 = 0;
+[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
+"475
+[; ;Main.c: 475:         PORTAbits.RA5 = 0;
+[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
 "477
-[; ;Main.c: 477: }
-[e :UE 147 ]
+[; ;Main.c: 477:     }
+}
+[e :U 156 ]
+"479
+[; ;Main.c: 479:     if (PIR1bits.TMR1IF)
+[e $ ! != -> . . _PIR1bits 0 0 `i -> 0 `i 157  ]
+"480
+[; ;Main.c: 480:     {
+{
+"481
+[; ;Main.c: 481:         PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"482
+[; ;Main.c: 482:         Timer_Interrupt();
+[e ( _Timer_Interrupt ..  ]
+"484
+[; ;Main.c: 484:     }
+}
+[e :U 157 ]
+"485
+[; ;Main.c: 485: }
+[e :UE 149 ]
 }
