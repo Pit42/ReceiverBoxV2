@@ -25,7 +25,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33 ./Eusart.h
 [; ;./Eusart.h: 33: void AddByteToBuffer (unsigned char Byte);
 [v _AddByteToBuffer `(v ~T0 @X0 0 ef1`uc ]
-"72 Main.c
+"56 Main.c
+[; ;Main.c: 56: void Say_Hello (void);
+[v _Say_Hello `(v ~T0 @X0 0 ef ]
+"72
 [; ;Main.c: 72:     CurrentMode = Running;
 [c E952 0 1 .. ]
 [n E952 Modes Running Config  ]
@@ -448,6 +451,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "69
 [; ;Main.c: 69:     AddByteToBuffer('X');
 [e ( _AddByteToBuffer (1 -> -> 88 `ui `uc ]
+"70
+[; ;Main.c: 70:     Say_Hello();
+[e ( _Say_Hello ..  ]
 "72
 [; ;Main.c: 72:     CurrentMode = Running;
 [e = _CurrentMode -> . `E952 0 `uc ]

@@ -68,6 +68,8 @@ End2 6
 [v _WriteByteFromBuffer WriteByteFromBuffer `(v  1 e 1 0 ]
 "59 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\Main.c
 [v _main main `(v  1 e 1 0 ]
+"92
+[v _Say_Hello Say_Hello `(v  1 e 1 0 ]
 "109
 [v _Init_Ports Init_Ports `(v  1 e 1 0 ]
 "148
@@ -134,7 +136,7 @@ End2 6
 [v _Relay6StopTime Relay6StopTime `[3]uc  1 e 3 0 ]
 "166 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f688.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
-[s S408 . 1 `uc 1 RA0 1 0 :1:0 
+[s S412 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -142,9 +144,9 @@ End2 6
 `uc 1 RA5 1 0 :1:5 
 ]
 "181
-[u S415 . 1 `S408 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES415  1 e 1 @5 ]
-[s S741 . 1 `uc 1 RC0 1 0 :1:0 
+[u S419 . 1 `S412 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES419  1 e 1 @5 ]
+[s S745 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -152,8 +154,8 @@ End2 6
 `uc 1 RC5 1 0 :1:5 
 ]
 "231
-[u S748 . 1 `S741 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES748  1 e 1 @7 ]
+[u S752 . 1 `S745 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES752  1 e 1 @7 ]
 [s S56 . 1 `uc 1 RAIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
@@ -204,7 +206,7 @@ End2 6
 ]
 [u S40 . 1 `S28 1 . 1 0 `S36 1 . 1 0 ]
 [v _T1CONbits T1CONbits `VES40  1 e 1 @16 ]
-[s S593 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S597 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -214,15 +216,15 @@ End2 6
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "543
-[u S602 . 1 `S593 1 . 1 0 ]
-[v _BAUDCTLbits BAUDCTLbits `VES602  1 e 1 @17 ]
+[u S606 . 1 `S597 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES606  1 e 1 @17 ]
 "598
 [v _SPBRG SPBRG `VEuc  1 e 1 @19 ]
 "605
 [v _RCREG RCREG `VEuc  1 e 1 @20 ]
 "612
 [v _TXREG TXREG `VEuc  1 e 1 @21 ]
-[s S551 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S555 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -232,9 +234,9 @@ End2 6
 `uc 1 CSRC 1 0 :1:7 
 ]
 "636
-[u S560 . 1 `S551 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES560  1 e 1 @22 ]
-[s S572 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S564 . 1 `S555 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES564  1 e 1 @22 ]
+[s S576 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -244,9 +246,9 @@ End2 6
 `uc 1 SPEN 1 0 :1:7 
 ]
 "698
-[u S581 . 1 `S572 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES581  1 e 1 @23 ]
-[s S280 . 1 `uc 1 CM 1 0 :3:0 
+[u S585 . 1 `S576 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES585  1 e 1 @23 ]
+[s S284 . 1 `uc 1 CM 1 0 :3:0 
 `uc 1 CIS 1 0 :1:3 
 `uc 1 C1INV 1 0 :1:4 
 `uc 1 C2INV 1 0 :1:5 
@@ -254,13 +256,13 @@ End2 6
 `uc 1 C2OUT 1 0 :1:7 
 ]
 "816
-[s S287 . 1 `uc 1 CM0 1 0 :1:0 
+[s S291 . 1 `uc 1 CM0 1 0 :1:0 
 `uc 1 CM1 1 0 :1:1 
 `uc 1 CM2 1 0 :1:2 
 ]
-[u S291 . 1 `S280 1 . 1 0 `S287 1 . 1 0 ]
-[v _CMCON0bits CMCON0bits `VES291  1 e 1 @25 ]
-[s S246 . 1 `uc 1 TRISA0 1 0 :1:0 
+[u S295 . 1 `S284 1 . 1 0 `S291 1 . 1 0 ]
+[v _CMCON0bits CMCON0bits `VES295  1 e 1 @25 ]
+[s S250 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -268,9 +270,9 @@ End2 6
 `uc 1 TRISA5 1 0 :1:5 
 ]
 "1074
-[u S253 . 1 `S246 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES253  1 e 1 @133 ]
-[s S263 . 1 `uc 1 TRISC0 1 0 :1:0 
+[u S257 . 1 `S250 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES257  1 e 1 @133 ]
+[s S267 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -278,8 +280,8 @@ End2 6
 `uc 1 TRISC5 1 0 :1:5 
 ]
 "1124
-[u S270 . 1 `S263 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES270  1 e 1 @135 ]
+[u S274 . 1 `S267 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES274  1 e 1 @135 ]
 [s S88 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TXIE 1 0 :1:1 
 `uc 1 OSFIE 1 0 :1:2 
@@ -294,23 +296,23 @@ End2 6
 ]
 [u S99 . 1 `S88 1 . 1 0 `S97 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES99  1 e 1 @140 ]
-[s S357 . 1 `uc 1 SCS 1 0 :1:0 
+[s S361 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IOSCF 1 0 :3:4 
 ]
 "1296
-[s S363 . 1 `uc 1 . 1 0 :4:0 
+[s S367 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S368 . 1 `S357 1 . 1 0 `S363 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES368  1 e 1 @143 ]
+[u S372 . 1 `S361 1 . 1 0 `S367 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES372  1 e 1 @143 ]
 "1393
 [v _ANSEL ANSEL `VEuc  1 e 1 @145 ]
-[s S325 . 1 `uc 1 IOCA0 1 0 :1:0 
+[s S329 . 1 `uc 1 IOCA0 1 0 :1:0 
 `uc 1 IOCA1 1 0 :1:1 
 `uc 1 IOCA2 1 0 :1:2 
 `uc 1 IOCA3 1 0 :1:3 
@@ -318,15 +320,15 @@ End2 6
 `uc 1 IOCA5 1 0 :1:5 
 ]
 "1637
-[s S332 . 1 `uc 1 IOC0 1 0 :1:0 
+[s S336 . 1 `uc 1 IOC0 1 0 :1:0 
 `uc 1 IOC1 1 0 :1:1 
 `uc 1 IOC2 1 0 :1:2 
 `uc 1 IOC3 1 0 :1:3 
 `uc 1 IOC4 1 0 :1:4 
 `uc 1 IOC5 1 0 :1:5 
 ]
-[u S339 . 1 `S325 1 . 1 0 `S332 1 . 1 0 ]
-[v _IOCAbits IOCAbits `VES339  1 e 1 @150 ]
+[u S343 . 1 `S329 1 . 1 0 `S336 1 . 1 0 ]
+[v _IOCAbits IOCAbits `VES343  1 e 1 @150 ]
 "25 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\Eusart.c
 [v _SendBuffer SendBuffer `[40]uc  1 e 40 0 ]
 "26
@@ -344,6 +346,14 @@ End2 6
 [v _Start_Timer Start_Timer `(v  1 e 1 0 ]
 {
 "66
+} 0
+"92 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\Main.c
+[v _Say_Hello Say_Hello `(v  1 e 1 0 ]
+{
+[s S22 . 21 `uc 1 Start 1 0 `uc 1 Address 1 1 `uc 1 Commandlength 1 2 `[16]uc 1 Command 16 3 `[2]uc 1 End 2 19 ]
+"94
+[v Say_Hello@ThisTelegram ThisTelegram `S22  1 a 21 29 ]
+"107
 } 0
 "35 D:\Users\Bendixen\Desktop\ReceiverBoxV2\ReceiverBoxV2.X\Eusart.c
 [v _Init_Transmitter Init_Transmitter `(v  1 e 1 0 ]

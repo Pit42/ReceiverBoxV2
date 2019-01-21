@@ -1733,7 +1733,7 @@ void main (void)
     Start_Timer();
 
     AddByteToBuffer('X');
-
+    Say_Hello();
 
     CurrentMode = Running;
 
