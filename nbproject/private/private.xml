@@ -6,6 +6,7 @@
         <group>
             <file>file:/D:/Users/Bendixen/Desktop/ReceiverBoxV2/ReceiverBoxV2.X/Main.c</file>
             <file>file:/D:/Users/Bendixen/Desktop/ReceiverBoxV2/ReceiverBoxV2.X/TelegramInterpreter.c</file>
+            <file>file:/D:/Users/Bendixen/Desktop/ReceiverBoxV2/ReceiverBoxV2.X/Eusart.c</file>
         </group>
     </open-files>
 </project-private>

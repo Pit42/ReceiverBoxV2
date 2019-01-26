@@ -53,7 +53,7 @@ void SetStopTime(unsigned char *RelayStopTime, unsigned char Time10sec, unsigned
 void HandleConfigByte (void);
 void __interrupt () Handle_Interrupts (void);
 void Handle_Telegram (TelegramType ThisTelegram);
-void Say_Hello (void);
+//void Say_Hello (void);
 
 /*PRIVATE FUNCTIONS*/
 void main (void)
@@ -67,7 +67,7 @@ void main (void)
     Start_Timer();
 
     AddByteToBuffer('X');
-    Say_Hello();
+    //Say_Hello();
 
     CurrentMode = Running;
     
@@ -89,6 +89,7 @@ void main (void)
     }
 }
 
+/*
 void Say_Hello (void)
 {
     TelegramType ThisTelegram;
@@ -105,7 +106,8 @@ void Say_Hello (void)
     
     SendTelegram(ThisTelegram);
 }
-
+*/
+ 
 void Init_Ports (void)
 {
     // Setting RA4 as Input

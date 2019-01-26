@@ -1719,7 +1719,7 @@ void SetStopTime(unsigned char *RelayStopTime, unsigned char Time10sec, unsigned
 void HandleConfigByte (void);
 void __attribute__((picinterrupt(""))) Handle_Interrupts (void);
 void Handle_Telegram (TelegramType ThisTelegram);
-void Say_Hello (void);
+
 
 
 void main (void)
@@ -1733,7 +1733,7 @@ void main (void)
     Start_Timer();
 
     AddByteToBuffer('X');
-    Say_Hello();
+
 
     CurrentMode = Running;
 
@@ -1754,24 +1754,7 @@ void main (void)
 
     }
 }
-
-void Say_Hello (void)
-{
-    TelegramType ThisTelegram;
-    ThisTelegram.Start = ':';
-    ThisTelegram.Address = '0';
-    ThisTelegram.Commandlength = 5;
-    ThisTelegram.Command[0] = 'H';
-    ThisTelegram.Command[1] = 'E';
-    ThisTelegram.Command[2] = 'L';
-    ThisTelegram.Command[3] = 'L';
-    ThisTelegram.Command[4] = 'O';
-    ThisTelegram.End[0] = 0x0D;
-    ThisTelegram.End[1] = 0x0A;
-
-    SendTelegram(ThisTelegram);
-}
-
+# 111 "Main.c"
 void Init_Ports (void)
 {
 
@@ -1882,7 +1865,7 @@ void SetStopTime(unsigned char *RelayStopTime, unsigned char Time10sec, unsigned
     {
         *(RelayStopTime + 0) = Counter_10sec + Time10sec;
     }
-# 240 "Main.c"
+# 242 "Main.c"
 }
 
 
